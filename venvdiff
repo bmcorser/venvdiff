@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# verify venvs
+# verify $ARGS are venvs in output from `workon`
 
 # loop
 #   workon venv
@@ -11,7 +11,16 @@
 # wait for return 
 # delete tmps
 
+# args in a list
 echo $@
 
+# requirements
+#  virtuenvwrapper
+#  vim
+#  ~/bin created and added to $PATH
+
 # install like this
-# curl http://betterthangrep.com/ack-standalone > ~/bin/ack && chmod 0755 !#:3
+# curl https://raw.github.com/bmcorser/venvdiff/master/venvdiff > ~/bin/venvdiff && chmod 0755 !#:3
+
+# using temp files
+# http://content.hccfl.edu/pollock/ShScript/TempFile.htm
