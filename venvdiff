@@ -1,20 +1,35 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+
+source `which virtualenvwrapper_lazy.sh`
 
 # verify $ARGS are venvs in output from `workon`
 
-# loop
-#   workon venv
-#   pip freeze to tmp
+function rm_freezes {
+  rm $pip_freezes
+  exit
+}
 
-# vimdiff tmps
+for (( i = 1; i <= ${#@}; i++ ))
+do
+  venv=${@[i]}
+  workon $venv
+  if [[ $? > 0 ]]; then
+    exit 1
+  else
+    pip_freezes[i]=`mktemp`
+    trap rm_freezes 1 2 3 15
+    echo "#$venv\n" > $pip_freezes[i]
+    pip freeze >> $pip_freezes[i]
+    deactivate
+  fi
+done
 
-# wait for return 
-# delete tmps
 
-# args in a list
-echo $@
+vimdiff $pip_freezes
 
+rm_freezes
 # requirements
+#  zsh?
 #  virtuenvwrapper
 #  vim
 #  ~/bin created and added to $PATH
