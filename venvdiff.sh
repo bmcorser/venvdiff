@@ -35,7 +35,7 @@ rm_freezes
 #  ~/bin created and added to $PATH
 
 # install like this
-# curl https://raw.github.com/bmcorser/venvdiff/master/venvdiff > ~/bin/venvdiff && chmod 0755 !#:3
+# curl https://raw.github.com/bmcorser/venvdiff/master/venvdiff.sh > ~/bin/venvdiff && chmod 0755 !#:3
 
 # using temp files
 # http://content.hccfl.edu/pollock/ShScript/TempFile.htm
