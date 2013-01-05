@@ -2,8 +2,6 @@
 
 source `which virtualenvwrapper_lazy.sh`
 
-# verify $ARGS are venvs in output from `workon`
-
 function rm_freezes {
   rm $pip_freezes
   exit
@@ -28,14 +26,3 @@ done
 vimdiff $pip_freezes
 
 rm_freezes
-# requirements
-#  zsh?
-#  virtuenvwrapper
-#  vim
-#  ~/bin created and added to $PATH
-
-# install like this
-# curl https://raw.github.com/bmcorser/venvdiff/master/venvdiff.sh > ~/bin/venvdiff && chmod 0755 !#:3
-
-# using temp files
-# http://content.hccfl.edu/pollock/ShScript/TempFile.htm
