@@ -24,19 +24,20 @@
       <section>
         <h1>venvdiff</h1>
 
-<p>a shell script to diff the output from <code>pip freeze</code> commands from multiple virtualenvs, using <a href="http://www.vim.org/">vim's</a> delightful <code>vimdiff</code> shortcut.</p>
+        <p>a shell script to diff the output from <code>pip freeze</code> commands from multiple virtualenvs, using <a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper</a> and <a href="http://www.vim.org/">vim's</a> delightful <code>vimdiff</code> shortcut.</p>
 
 <h2>install</h2>
 
+create <code>~/bin/</code> add to your <code>$PATH</code>
 <pre><code>curl https://raw.github.com/bmcorser/venvdiff/master/venvdiff.sh &gt; ~/bin/venvdiff &amp;&amp; chmod 0755 !#:3
 </code></pre>
 
 <h2>requirements</h2>
 
 <ul>
-<li>vim</li>
+  <li>virtualenvwrapper</li>
+  <li>vim</li>
 <li>
-<code>~/bin/</code> created and added to <code>$PATH</code>
 </li>
 </ul><p>install command stolen from <a href="http://betterthangrep.com">ack-grep</a> website</p>
       </section>
