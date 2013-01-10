@@ -12,5 +12,6 @@ create `~/bin/` and add to your `$PATH`
 
  * virtualenvwrapper
  * vim
+ * when using oh-my-zsh, both `virtualenv` and `virtualenvwrapper` plugins are required
 
 install command stolen from [ack-grep](http://betterthangrep.com) website
