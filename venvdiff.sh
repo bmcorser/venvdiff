@@ -14,7 +14,7 @@ do
   if [[ $? > 0 ]]; then
     exit 1
   else
-    pip_freezes[i]=`mktemp -t venv`
+    pip_freezes[i]=`mktemp`
     trap rm_freezes 1 2 3 15
     echo "#$venv\n" > $pip_freezes[i]
     pip freeze >> $pip_freezes[i]
